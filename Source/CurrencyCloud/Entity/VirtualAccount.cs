@@ -47,6 +47,11 @@ namespace CurrencyCloud.Entity
         /// Routing Code
         /// </summary>
         public string RoutingCode { get; set; }
+        
+        /// <summary
+        /// Wire Routing Code
+        /// </summary>
+        public string WireRoutingCode { get; set; }
 
         /// <summary>
         /// IBAN Created At
@@ -72,6 +77,7 @@ namespace CurrencyCloud.Entity
                     BankInstitutionAddress,
                     BankInstitutionCountry,
                     RoutingCode,
+                    WireRoutingCode,
                     CreatedAt,
                     UpdatedAt
                 }
@@ -95,7 +101,8 @@ namespace CurrencyCloud.Entity
                    BankInstitutionName == virtualAccountNumber.BankInstitutionName &&
                    BankInstitutionAddress == virtualAccountNumber.BankInstitutionAddress &&
                    BankInstitutionCountry == virtualAccountNumber.BankInstitutionCountry &&
-                   RoutingCode == virtualAccountNumber.RoutingCode &&
+                   RoutingCode == virtualAccountNumber.RoutingCode && 
+                   WireRoutingCode == virtualAccountNumber.WireRoutingCode &&
                    CreatedAt == virtualAccountNumber.CreatedAt &&
                    UpdatedAt == virtualAccountNumber.UpdatedAt;
         }
